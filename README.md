@@ -16,12 +16,7 @@ git clone http://github.com/motoshifurugen/dotfiles.git
 cd dotfiles
 ```
 
-2. Install Homebrew packages and applications:
+1. Set up configurations:
 ```zsh
-./setup/brew_install.sh
-```
-
-3. Set up configurations:
-```zsh
-./setup/install.sh
+./setup/setup.zsh
 ```

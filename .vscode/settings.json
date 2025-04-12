@@ -1,0 +1,48 @@
+{
+  //----------------------------------------------------------
+  // Window Settings
+  //----------------------------------------------------------
+  "window.zoomLevel": 0, // Editor display magnification (0 is standard size)
+
+  //----------------------------------------------------------
+  // Explorer Settings
+  //----------------------------------------------------------
+  "explorer.confirmDelete": false, // Do not show confirmation dialog when deleting files
+  "explorer.confirmDragAndDrop": false, // Do not show confirmation dialog for drag and drop operations
+
+  //----------------------------------------------------------
+  // Workbench Settings
+  //----------------------------------------------------------
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+
+  //----------------------------------------------------------
+  // Git Settings
+  //----------------------------------------------------------
+  "git.confirmSync": false, // Do not show confirmation dialog for Git sync
+  "githubPullRequests.pullBranch": "never", // Do not automatically pull PR branches
+
+  // Editor Settings
+  "editor.minimap.autohide": true, // Automatically hide minimap when not in use
+  "editor.fontSize": 14,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Set Prettier as default formatter
+  "editor.formatOnSave": true, // Automatically format on save
+
+  //----------------------------------------------------------
+  // Jupyter Settings
+  //----------------------------------------------------------
+  "jupyter.askForKernelRestart": false, // Do not show confirmation dialog for kernel restart
+  "jupyter.interactiveWindow.creationMode": "perFile", // Create interactive window per file
+  "interactiveWindow.executeWithShiftEnter": true, // Execute code with Shift+Enter
+
+  //----------------------------------------------------------
+  // Language-specific Settings
+  //----------------------------------------------------------
+  "typescript.updateImportsOnFileMove.enabled": "always", // Automatically update import paths when moving TypeScript files
+
+  //----------------------------------------------------------
+  // Terminal Settings
+  //----------------------------------------------------------
+  "terminal.integrated.fontFamily": "Hack Nerd Font"
+}
