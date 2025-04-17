@@ -63,5 +63,4 @@ FORCE=1
 #----------------------------------------------------------
 # last message
 #----------------------------------------------------------
-util::info "🎉 All set! Your development environment is now as shiny as a new pair of sneakers!"
-util::info "✨ Time to restart your terminal and start coding like a wizard! 🧙‍♂️"
+util::info "🎉 全ての設定が完了しました！ターミナルを再起動して、新しい環境を楽しんでください！"

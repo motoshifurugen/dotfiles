@@ -1,6 +1,29 @@
+# プロンプト全体のフォーマットを定義
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# 右側プロンプトを使用しない
+[line_break]
+disabled = true
+
+# モジュールの順序を指定
+format = """
+$directory\
+$git_branch\
+$git_status\
+$battery\
+$time\
+$character
+"""
+
 [directory]
 truncation_length = 10
 truncate_to_repo = false
+style = "bold #F37199"
+
+[git_branch]
+style = "bold #E78B48"
 
 [git_status]
 conflicted = "💥"
@@ -13,21 +36,52 @@ modified = "📝"
 staged = '🔦'
 renamed = "🏷"
 deleted = "🗑"
+style = "white"
+format = '[\[$all_status$ahead_behind\]]($style) '
 
 [[battery.display]]
-threshold = 100 // バッテリー残量が常に表示されるように設定
-style = "bold blue"
+threshold = 100
+style = "bold #F5C45E"
 
 [battery]
-full_symbol = "🤗"
-charging_symbol = "😌"
-discharging_symbol = "😨"
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🪫"
 
 [time]
 disabled = false
-use_12hr = true // 12時間表示に設定
+use_12hr = true
+style = "bold #7FA6C3"
 
 [memory_usage]
-disabled = false
-threshold = -1 // 常にメモリ使用率が表示されるように設定
-style = "bold dimmed green"
+disabled = true
+
+[rust]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[golang]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
+
+[java]
+disabled = true
+
+[php]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[aws]
+disabled = true

@@ -18,5 +18,6 @@ cd dotfiles
 
 1. Set up configurations:
 ```zsh
+chmod +x ./setup/setup.zsh
 ./setup/setup.zsh
 ```

@@ -15,7 +15,7 @@
   //----------------------------------------------------------
   "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.orientation": "vertical",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.colorTheme": "Cursor Dark Anysphere",
 
   //----------------------------------------------------------
   // Git Settings
