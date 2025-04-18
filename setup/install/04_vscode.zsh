@@ -14,29 +14,25 @@ VSCODE_BIN="$VSCODE_APP/Contents/Resources/app/bin/code"
 # VSCodeがインストールされているか確認
 if [[ -d "$VSCODE_APP" ]]; then
     util::info "VSCodeが見つかりました。"
-    
+
     # codeコマンドがパスに存在するか確認
     if ! command -v code &> /dev/null; then
         util::info "codeコマンドが見つかりません。自動的にセットアップします..."
-        
         # シンボリックリンクを作成
         if [[ -f "$VSCODE_BIN" ]]; then
             # /usr/local/bin ディレクトリが存在するか確認し、必要なら作成
             if [[ ! -d "/usr/local/bin" ]]; then
                 sudo mkdir -p /usr/local/bin 2>/dev/null || true
             fi
-            
             # シンボリックリンクを作成（sudoが必要な場合と不要な場合の両方を試行）
             sudo ln -sf "$VSCODE_BIN" /usr/local/bin/code 2>/dev/null || \
             ln -sf "$VSCODE_BIN" /usr/local/bin/code 2>/dev/null || \
             util::warning "codeコマンドのシンボリックリンク作成に失敗しました。代替方法を使用します。"
-            
             # PATHが/usr/local/binを含んでいるか確認
             if [[ ":$PATH:" != *":/usr/local/bin:"* ]]; then
                 util::warning "/usr/local/bin がPATHに含まれていません。現在のセッションにPATHを追加します。"
                 export PATH="/usr/local/bin:$PATH"
             fi
-            
             # 確認
             if command -v code &> /dev/null; then
                 util::info "codeコマンドが正常にセットアップされました。"

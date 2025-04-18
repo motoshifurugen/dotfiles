@@ -35,43 +35,21 @@ cd .config
 
 for name in *; do
   if [[ ! $name =~ ^(setup|.config|vscode|README\.md|git)$ ]]; then
-    ln -sf ${PWD}/$name ${HOME}/.$name
+    # 適切なディレクトリにシンボリックリンクを作成
+    if [[ ! -d ${HOME}/.config/${name%/*} ]]; then
+      mkdir -p ${HOME}/.config/${name%/*}
+    fi
+    ln -sf ${PWD}/$name ${HOME}/.config/$name
   fi
 done
 
 cd ..
-
-# #----------------------------------------------------------
-# # VSCode Settings
-# #----------------------------------------------------------
-# if [[ ! -d ${HOME}/Library/Application\ Support/Code/User ]]; then
-#   mkdir -p ${HOME}/Library/Application\ Support/Code/User
-# fi
-# ln -sfv ${PWD}/.vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
-
-#----------------------------------------------------------
-# Initialize Starship
-#----------------------------------------------------------
-if command -v starship &> /dev/null; then
-  # Create or update .zshrc with starship initialization
-  if ! grep -q "starship init zsh" ${HOME}/.zshrc &> /dev/null; then
-    echo -e "\n# Initialize starship\neval \"\$(starship init zsh)\"" >> ${HOME}/.zshrc
-    util::info "Starshipの初期化コードを.zshrcに追加しました。"
-  fi
-else
-  util::warning "Starshipがインストールされていません。先にBrewでインストールしてください。"
-fi
 
 #----------------------------------------------------------
 # Run installation scripts
 #----------------------------------------------------------
 FORCE=1
 . ${DOTFILES_DIR}/setup/install.zsh
-
-# #----------------------------------------------------------
-# # Other
-# #----------------------------------------------------------
-# cp ${HOME}/dotfiles/.config/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 
 #----------------------------------------------------------
 # last message
