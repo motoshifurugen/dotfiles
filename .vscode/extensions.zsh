@@ -14,6 +14,7 @@ ionutvmi.path-autocomplete         # File path autocompletion
 mechatroner.rainbow-csv            # Colorize CSV columns for better readability
 mhutchie.git-graph                # Visual Git branch and commit history
 ms-azuretools.vscode-docker        # Docker file editing and container management
+ms-playwright.playwright           # Playwright Test for VSCode
 ms-python.debugpy                  # Python code debugging
 ms-python.python                   # Python language support (IntelliSense and debugging)
 ms-vscode-remote.remote-containers  # Remote container development support

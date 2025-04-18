@@ -44,5 +44,23 @@
   //----------------------------------------------------------
   // Terminal Settings
   //----------------------------------------------------------
-  "terminal.integrated.fontFamily": "Hack Nerd Font"
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+
+  //----------------------------------------------------------
+  // MCP Settings
+  //----------------------------------------------------------
+  "mcp": {
+    "inputs": [],
+    "servers": {
+      "playwright": {
+        "command": "wsl",
+        "args": [
+          "bash",
+          "-ic",
+          "node /home/t-kurasawa/.nvm/versions/node/v22.14.0/lib/node_modules/@executeautomation/playwright-mcp-server/dist/index.js"
+        ]
+      }
+    }
+  },
+  "chat.agent.enabled": true
 }
