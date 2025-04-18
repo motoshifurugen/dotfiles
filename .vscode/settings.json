@@ -53,11 +53,9 @@
     "inputs": [],
     "servers": {
       "playwright": {
-        "command": "wsl",
+        "command": "node",
         "args": [
-          "bash",
-          "-ic",
-          "node /home/t-kurasawa/.nvm/versions/node/v22.14.0/lib/node_modules/@executeautomation/playwright-mcp-server/dist/index.js"
+          "/Users/cocoa_hearts/.local/share/mise/installs/node/20.12.2/lib/node_modules/@executeautomation/playwright-mcp-server/dist/index.js"
         ]
       }
     }
