@@ -50,6 +50,19 @@ cd ..
 # ln -sfv ${PWD}/.vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
 
 #----------------------------------------------------------
+# Initialize Starship
+#----------------------------------------------------------
+if command -v starship &> /dev/null; then
+  # Create or update .zshrc with starship initialization
+  if ! grep -q "starship init zsh" ${HOME}/.zshrc &> /dev/null; then
+    echo -e "\n# Initialize starship\neval \"\$(starship init zsh)\"" >> ${HOME}/.zshrc
+    util::info "Starshipの初期化コードを.zshrcに追加しました。"
+  fi
+else
+  util::warning "Starshipがインストールされていません。先にBrewでインストールしてください。"
+fi
+
+#----------------------------------------------------------
 # Run installation scripts
 #----------------------------------------------------------
 FORCE=1
