@@ -1,3 +1,6 @@
+# プロンプト前の空白行を排除
+add_newline = false
+
 # プロンプト全体のフォーマットを定義
 [character]
 success_symbol = "[❯](bold green)"
