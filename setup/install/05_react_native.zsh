@@ -220,6 +220,7 @@ fi
 # Expo CLIのインストール（オプション）
 util::info "Expo CLIをインストール中..."
 npm install -g expo-cli
+util::info "最新のExpo推奨方法：npx create-expo-app@latestを使用してプロジェクトを作成できます"
 
 # .zshrcに必要な環境変数を追加
 util::info "環境変数を設定中..."
@@ -239,8 +240,15 @@ fi
 util::info "React Native開発環境のセットアップが完了しました！"
 util::info "Android Studioを起動し、SDKマネージャーでAndroid SDKをインストールしてください。"
 util::info "また、以下のコマンドで新しいReact Nativeプロジェクトを作成できます："
+util::info "  # React Native CLI方式（従来型）:"
 util::info "  npx react-native init MyApp"
 util::info "  cd MyApp"
 util::info "  npx react-native run-ios    # iOSシミュレータでアプリを実行"
 util::info "  npx react-native run-android  # Androidエミュレータでアプリを実行"
-util::info "詳細は公式ドキュメント(https://reactnative.dev/docs/environment-setup)を参照してください。\n"
+util::info ""
+util::info "  # Expo方式（推奨）:"
+util::info "  npx create-expo-app@latest MyApp"
+util::info "  cd MyApp"
+util::info "  npx expo start"
+util::info "詳細は公式ドキュメント(https://reactnative.dev/docs/environment-setup)と"
+util::info "Expoドキュメント(https://docs.expo.dev/get-started/create-a-new-app/)を参照してください。\n"
