@@ -13,8 +13,8 @@
   //----------------------------------------------------------
   // Workbench Settings
   //----------------------------------------------------------
-  "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.orientation": "vertical",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Cursor Dark Anysphere",
 
   //----------------------------------------------------------

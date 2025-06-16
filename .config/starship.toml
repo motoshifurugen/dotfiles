@@ -72,7 +72,9 @@ disabled = true
 disabled = true
 
 [python]
-disabled = true
+disabled = false
+format = '[$virtualenv]($style) '
+style = "bold #A3BE8C"
 
 [ruby]
 disabled = true
